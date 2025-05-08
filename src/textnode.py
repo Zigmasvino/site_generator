@@ -28,7 +28,10 @@ class TextNode:
     
     def __eq__(self, object):
         if isinstance(object, TextNode):
-            return self.text == object.text and self.text_type == object.text_type and self.url == object.url
+            return (self.text == object.text
+                    and self.text_type == object.text_type
+                    and self.url == object.url
+            )
         return False
 
     def __repr__(self):
