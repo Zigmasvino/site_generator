@@ -32,16 +32,10 @@ class HTMLNode:
         return f"HTMLNode({self.tag}, {self.value}, children: {self.children}, {self.props})"
     
 class LeafNode(HTMLNode):
-    """
-    A class representing a leaf node in an HTML document.
-    """
     def __init__(self, tag, value, props=None):
         super().__init__(tag, value, children=[], props=props)
     
     def to_html(self):
-        """
-        Convert the leaf node to its HTML representation.
-        """
         if self.value is None:
             raise ValueError("LeafNode must have a value")
             
